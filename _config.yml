@@ -1,0 +1,9 @@
+# GitHub Pages : fichiers du dépôt à ne pas publier sur le site
+exclude:
+  - README.md
+  - CLAUDE.md
+  - src/
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
