@@ -6,61 +6,57 @@
   <meta name="description" content="Maroc Patrimoine - Gestion générale foncière, recherche de biens en déshérence et démarches juridiques au Maroc.">
   <meta name="keywords" content="bien en déshérence, patrimoine Maroc, héritage bloqué, régularisation foncière, succession Maroc">
   <title>Maroc Patrimoine | Gestion Générale Foncière au Maroc</title>
+  <link rel="canonical" href="https://marocpatrimoine.com/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#001430">
+
+  <!-- Open Graph / réseaux sociaux -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Maroc Patrimoine">
+  <meta property="og:url" content="https://marocpatrimoine.com/">
+  <meta property="og:title" content="Maroc Patrimoine | Gestion Générale Foncière au Maroc">
+  <meta property="og:description" content="Recherche de biens en déshérence, démarches juridiques et administratives, déblocage de successions au Maroc. Honoraires uniquement en cas de succès.">
+  <meta property="og:image" content="https://marocpatrimoine.com/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Architecture marocaine traditionnelle">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Maroc Patrimoine | Gestion Générale Foncière au Maroc">
+  <meta name="twitter:description" content="Recherche de biens en déshérence, démarches juridiques et administratives, déblocage de successions au Maroc.">
+  <meta name="twitter:image" content="https://marocpatrimoine.com/assets/og-image.jpg">
+
+  <!-- Données structurées -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Maroc Patrimoine",
+    "url": "https://marocpatrimoine.com/",
+    "image": "https://marocpatrimoine.com/assets/og-image.jpg",
+    "description": "Gestion générale foncière, recherche de biens en déshérence et démarches juridiques et administratives au Maroc.",
+    "areaServed": { "@type": "Country", "name": "Maroc" },
+    "knowsLanguage": "fr",
+    "serviceType": [
+      "Recherche de biens en déshérence",
+      "Procédure d'indemnisation en cas d'expropriation",
+      "Récupération de sommes consignées",
+      "Partage de biens indivis",
+      "Récupération de biens spoliés",
+      "Régularisation foncière"
+    ]
+  }
+  </script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
 
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-
-  <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "primary": "#001430",
-            "primary-container": "#002855",
-            "on-primary": "#ffffff",
-            "on-primary-container": "#7490c3",
-            "secondary": "#545f73",
-            "on-secondary": "#ffffff",
-            "secondary-container": "#d5e0f8",
-            "tertiary": "#201100",
-            "tertiary-container": "#3b2400",
-            "tertiary-fixed-dim": "#ffb955",
-            "on-tertiary-container": "#c58200",
-            "surface": "#f9f9fb",
-            "surface-container": "#eeeef0",
-            "surface-container-low": "#f3f3f5",
-            "surface-container-high": "#e8e8ea",
-            "surface-container-highest": "#e2e2e4",
-            "surface-container-lowest": "#ffffff",
-            "on-surface": "#1a1c1d",
-            "on-surface-variant": "#43474f",
-            "outline": "#747780",
-            "outline-variant": "#c4c6d0",
-            "gold": "#f5a623",
-            "corporate-blue": "#001430",
-          },
-          fontFamily: {
-            "headline": ["Noto Serif"],
-            "body": ["Inter"],
-            "label": ["Inter"]
-          },
-          borderRadius: {
-            "DEFAULT": "0.25rem",
-            "lg": "0.5rem",
-            "xl": "0.75rem",
-            "2xl": "1rem",
-            "3xl": "1.5rem",
-            "full": "9999px"
-          },
-        },
-      },
-    }
-  </script>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preload" as="image" href="assets/hero.webp" type="image/webp">
 
   <style>
     .material-symbols-outlined {
@@ -120,7 +116,7 @@
         <a href="#contact" class="hidden md:inline-flex bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg text-sm font-semibold tracking-wide border border-outline-variant/20 hover:scale-105 transition-all active:scale-95 no-underline">
           Consultation
         </a>
-        <button id="menuToggle" class="md:hidden text-white">
+        <button id="menuToggle" class="md:hidden text-white" aria-label="Ouvrir le menu" aria-controls="mobileMenu">
           <span class="material-symbols-outlined text-3xl">menu</span>
         </button>
       </div>
@@ -139,7 +135,10 @@
   <header class="relative min-h-[700px] flex items-center overflow-hidden bg-primary text-white">
     <div class="absolute inset-0 z-0 opacity-40">
       <div class="absolute inset-0 bg-gradient-to-b from-primary via-transparent to-primary"></div>
-      <img alt="Vue panoramique d'architecture marocaine" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5vU_Eai7coEBIXz7mdKIBsUvIN3XRCTT_tGrOO834Zyy_eCWoKWCP89mns7m_QsSSCBQO4Yh4WQLulA42BRLe8zruArhd08zWud-rIX40bd6ytNkIZGi5KEONRx0YzzHBGlFeyx8nVOKuta75kF1QOfRXzdosMqDe5i7QEBIARojzWPoJk_8KQf-Zr2yHO6iy6rd2jcyonzZoaJcekAh9De4EtMhPngliQl3j6p53KqbNMz-eQ4isx7W8HTXxguGrDx9F722hQZUY"/>
+      <picture>
+        <source srcset="assets/hero.webp" type="image/webp">
+        <img alt="Vue panoramique d'architecture marocaine" class="w-full h-full object-cover" src="assets/hero.jpg" width="1024" height="1024" fetchpriority="high"/>
+      </picture>
     </div>
     <div class="container mx-auto px-6 md:px-8 relative z-10 text-center max-w-4xl fade-up">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary-container/30 border border-tertiary-fixed-dim/20 text-tertiary-fixed-dim text-xs font-semibold mb-6 tracking-widest uppercase">
@@ -311,7 +310,7 @@
             <input type="hidden" name="_subject" value="Nouvelle demande - Maroc Patrimoine">
             <input type="hidden" name="_captcha" value="true">
             <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" value="https://marocpatrimoine.com">
+            <input type="hidden" name="_next" value="https://marocpatrimoine.com/">
             <input type="text" name="_honey" style="display:none">
 
             <div class="grid md:grid-cols-2 gap-8">
@@ -380,18 +379,20 @@
       </div>
     </div>
     <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-8 border-t border-white/10 text-center text-white/30 text-xs">
-      <p>&copy; 2024 Maroc Patrimoine. Tous droits réservés.</p>
+      <p>&copy; <span id="year">2026</span> Maroc Patrimoine. Tous droits réservés.</p>
     </div>
   </footer>
 
   <!-- Back to top -->
   <div class="fixed bottom-8 right-8 z-50" id="floatingCTA" style="display:none;">
-    <a class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all" href="#">
+    <a class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all" href="#" aria-label="Retour en haut">
       <span class="material-symbols-outlined">arrow_upward</span>
     </a>
   </div>
 
   <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
     window.addEventListener('scroll', () => {
       const scrollTop = document.documentElement.scrollTop;
       const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;

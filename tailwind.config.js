@@ -1,0 +1,48 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./index.html"],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#001430",
+        "primary-container": "#002855",
+        "on-primary": "#ffffff",
+        "on-primary-container": "#7490c3",
+        "secondary": "#545f73",
+        "on-secondary": "#ffffff",
+        "secondary-container": "#d5e0f8",
+        "tertiary": "#201100",
+        "tertiary-container": "#3b2400",
+        "tertiary-fixed-dim": "#ffb955",
+        "on-tertiary-container": "#c58200",
+        "surface": "#f9f9fb",
+        "surface-container": "#eeeef0",
+        "surface-container-low": "#f3f3f5",
+        "surface-container-high": "#e8e8ea",
+        "surface-container-highest": "#e2e2e4",
+        "surface-container-lowest": "#ffffff",
+        "on-surface": "#1a1c1d",
+        "on-surface-variant": "#43474f",
+        "outline": "#747780",
+        "outline-variant": "#c4c6d0",
+        "gold": "#f5a623",
+        "corporate-blue": "#001430",
+      },
+      fontFamily: {
+        "headline": ["Noto Serif", "serif"],
+        "body": ["Inter", "sans-serif"],
+        "label": ["Inter", "sans-serif"],
+      },
+      borderRadius: {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "2xl": "1rem",
+        "3xl": "1.5rem",
+        "full": "9999px",
+      },
+    },
+  },
+  plugins: [require("@tailwindcss/forms")],
+};
